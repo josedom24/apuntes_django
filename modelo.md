@@ -68,9 +68,42 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 	* swappable
 
 * ManyToManyField(othermodel)
+
+	Parámetros:
+
+	* limit_choice_to
+	* related_name
+	* related_query_name 
+	* symmetrical
+	* through
+	* through_fields
+	* db_table
+	* db_constraint
+	* swappable
+
 * OneToOneField(othermodel,parent_link=flase)
 
+Los mismos parámetros que le campo ForeigKey,
+
 ### Opciones de los campos
+
+* null
+* blank
+* choice
+* db_column
+* db_index
+* db_tablespace
+* default
+* editable
+* error_messages
+* help_text
+* primmary_key
+* unique
+* unique_for_date
+* unique_for_month
+* unique_for_year
+* verbose_name
+* validators
 
 ### Metainformación en los modelos
 
