@@ -1,6 +1,5 @@
 # Modelo de datos
 
-* [Campos de relación](#relacion)
 
 La estructura del fichero donde definimos el modelo es el siguiente:
 
@@ -46,7 +45,7 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 * TimeField
 * URLField(max_length=200)
 
-<a name="realcion"/>
+
 ### Campos de relación
 
 * ForeigKey (othermodel)
@@ -63,3 +62,28 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 	* db_constraint
 	* on_delete 
 	* swappable
+
+* ManyToManyField(othermodel)
+* OneToOneField(othermodel,parent_link=flase)
+
+### Opciones de los campos
+
+### Metainformación en los modelos
+
+* abstract
+* app_label
+* db_table
+* db_tablespace
+* get_lastest_by
+* managed
+* order_with_respect_to
+* ordering
+* permissions
+* default_permissions
+* proxy
+* select_on_save
+* unique_together
+* index_together
+* verbose_name: Nombre "humano" singular.
+* verbose_name_prural: Nombre "humano" plural.
+
