@@ -29,6 +29,8 @@ Para añadir un objeto a una relación N-N hay que utilizar el método add. cuan
 ### Obtener todos los objetos
 
 Similar a:
+
 		select * from alumnos
 		lista=Alumnos.objects.all()
+
 Lista es del tipo QuerySet.
