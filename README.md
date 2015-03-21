@@ -5,3 +5,4 @@ Apuntes personales, resumen de la [documentación oficial](https://docs.djangopr
 ### Contenidos
 
 * [Modelo de datos](modelo.md)
+* [API del modelo](api.md)
