@@ -15,7 +15,7 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 
     		# Función que nos permite representar un objeto de la clase
     		def __unicode__ (self):
-    			return *nombre_campo*
+    			return self.*nombre_campo*
 
     		# Metainformación del modleo
     		class Meta:
