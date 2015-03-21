@@ -104,7 +104,7 @@ Me permite hacer consultas usando el operador OR.
 
 ### Comparando objetos
 
-==
+		==
 
 ### Borrando objetoas
 
