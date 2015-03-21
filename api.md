@@ -18,7 +18,7 @@
 		a.Unidad=c
 		a.save()
 
-	Para añadir un objeto a una relación N-N hay que utilizar el método add. cuando haga un ejemplo lo pongo aquí.
+Para añadir un objeto a una relación N-N hay que utilizar el método add. cuando haga un ejemplo lo pongo aquí.
 
 ### Obtener objetos (select)
 
