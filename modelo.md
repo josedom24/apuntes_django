@@ -46,7 +46,7 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 * TimeField
 * URLField(max_length=200)
 
-(realacion)
+<a name="realcion"/>
 ### Campos de relación
 
 * ForeigKey (othermodel)
