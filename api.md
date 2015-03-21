@@ -33,3 +33,33 @@ Similar a: **select * from alumnos**
 		lista=Alumnos.objects.all()
 
 Lista es del tipo QuerySet.
+
+### Obtener varios objetos (select)
+
+* **filter**: Devuelve objetos cuyo parámetros de búsqueda coinciden.
+* **exclude**: Devuelve objetos cuyo parámetros de búsqueda no coinciden.
+
+select * from Alumnos where CodPostal='41710'
+	
+		lista=Alumnos.objects.filter(CodPostal='41710')
+
+select * from Alumnos where Provincia!='Sevilla'
+
+		lista=Alumnos.objects.exclude(Provincia='Sevilla')
+
+Se pueden concatenar: Alumnos.objects.filter(...).exclude(...).filter(...)
+
+
+### Obtener un objeto (where)
+
+Si quieres obtener un sólo registro, por ejemplo preguntando por la clave primaria:
+
+		 a=Alumnos.objects.get(id=1)
+
+Si no obtienes ningún registro, salta la excepción DoesNotExist, si devuelve más de un registro, salta la excepción MultipleObjectsReturned.
+
+### Limitando resultados (limit)
+
+Un querySet es una lista de objetos, por lo tanto se pueden seleccionar como lo hacemos con las listas:
+
+		a=Alumnos.objects.all()[1:5]
