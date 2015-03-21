@@ -1,5 +1,7 @@
 # Modelo de datos
 
+* [Campos de relación](#relacion)
+
 La estructura del fichero donde definimos el modelo es el siguiente:
 
 		from django.db import models
@@ -44,6 +46,7 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 * TimeField
 * URLField(max_length=200)
 
+(realacion)
 ### Campos de relación
 
 * ForeigKey (othermodel)
@@ -60,4 +63,3 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 	* db_constraint
 	* on_delete 
 	* swappable
-	
