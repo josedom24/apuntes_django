@@ -88,7 +88,7 @@ Los mismos parámetros que le campo ForeigKey,
 ### Opciones de los campos
 
 * null
-* blank
+* blank: Campo no requerido (True)
 * choice
 * db_column
 * db_index
