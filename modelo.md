@@ -43,3 +43,21 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 * TextField
 * TimeField
 * URLField(max_length=200)
+
+### Campos de relación
+
+* ForeigKey (othermodel)
+
+	* Para hacer una realción recursiva: FroreigKey('self')
+	* Si el modelo está en otra aplicación: ForeigKey(app.othermodel)
+
+	Parámetros:
+
+	* limit_choice_to
+	* related_name
+	* related_query_name
+	* to_field
+	* db_constraint
+	* on_delete 
+	* swappable
+	
