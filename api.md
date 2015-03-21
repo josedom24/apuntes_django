@@ -22,9 +22,9 @@ Para añadir un objeto a una relación N-N hay que utilizar el método add. cuan
 
 ### Obtener objetos (select)
 
-**QuerySet**: representa un conjunto de objetos, registros de una base de datos. En SQL un select.
-**filter**: Me permite realizar las clausulas where y limit de SQL.
-**manager**: Me permite obtener QuerySet, por defecto tengo objects.
+* **QuerySet**: representa un conjunto de objetos, registros de una base de datos. En SQL un select.
+* **filter**: Me permite realizar las clausulas where y limit de SQL.
+* **manager**: Me permite obtener QuerySet, por defecto tengo objects.
 
 ### Obtener todos los objetos
 
