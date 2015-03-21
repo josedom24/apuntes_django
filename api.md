@@ -82,10 +82,35 @@ Operadores:
 * startswith, endswith
 * iconstains,istartswith, iendswith: Igual que las anteriores, sin tener en cuenta mayúsculas y minúsculas.
 * lte,lt,gte,gt
+* in: está en una lista
+
 
 ### JOIN
 
 		lista=Alumnos.objects.filter(Unidad__Abr='1')
 
 Hay que estudiarlo con más detenimiento, cuando me haga falta.
+
+### F()
+
+### pk
+
+Para identificar a la clave primaria puedo usar pk.
+
+### Q()
+
+Me permite hacer consultas usando el operador OR.
+
+
+### Comparando objetos
+
+==
+
+### Borrando objetoas
+
+		a.delete()
+
+### Modificar varios objetos
+
+update
 
