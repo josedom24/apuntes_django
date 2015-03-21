@@ -16,6 +16,6 @@ La estructura del fichero donde definimos el modelo es el siguiente:
     		class Meta:
     			*lista_metainformación*
 
- ### Tipos de campo
+### Tipos de campo
 
- * AutoField: Entero autonúmerico.
+* AutoField: Entero autonúmerico.
