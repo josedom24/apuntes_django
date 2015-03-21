@@ -52,10 +52,10 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 
 ### Campos de relación
 
-* ForeigKey (othermodel)
+* ForeignKey (othermodel)
 
-	* Para hacer una realción recursiva: FroreigKey('self')
-	* Si el modelo está en otra aplicación: ForeigKey(app.othermodel)
+	* Para hacer una realción recursiva: FroreignKey('self')
+	* Si el modelo está en otra aplicación: ForeignKey(app.othermodel)
 
 	Parámetros:
 
@@ -83,7 +83,7 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 
 * OneToOneField(othermodel,parent_link=flase)
 
-Los mismos parámetros que le campo ForeigKey,
+Los mismos parámetros que le campo ForeignKey,
 
 ### Opciones de los campos
 
