@@ -19,3 +19,27 @@ La estructura del fichero donde definimos el modelo es el siguiente:
 ### Tipos de campo
 
 * AutoField: Entero autonúmerico.
+* BigIntergerField
+* BinaryField
+* BooleanField
+* CharField(max_length=None)
+* CommaSeparatedIntegerField(max_length=None)
+* DateField(auto_now=False,auto_now_add=False)
+* DateTimeField(auto_now=False,auto_now_add=False)
+* DecimealField(max_digits=None,decimal_places=None)
+* EmailField(max_length=75)
+* FileField(uptoad_to=None,max_length=100)
+* FilePathField
+* FloatField
+* ImageField(upload_to=None,height_field=None,width_field=None,max_length=None)
+* IntegerField
+* IPAddressField
+* GenericIPAddressField
+* NullBooleanField
+* PositiveIntegerField
+* PositiveSmallIntegerField
+* SlugField(max_length=50)
+* SmallIntegerField
+* TextField
+* TimeField
+* URLField(max_length=200)
