@@ -34,7 +34,7 @@ Similar a: **select * from alumnos**
 
 Lista es del tipo QuerySet.
 
-### Obtener varios objetos (select)
+### Obtener varios objetos (select-where)
 
 * **filter**: Devuelve objetos cuyo parámetros de búsqueda coinciden.
 * **exclude**: Devuelve objetos cuyo parámetros de búsqueda no coinciden.
@@ -50,7 +50,7 @@ select * from Alumnos where Provincia!='Sevilla'
 Se pueden concatenar: Alumnos.objects.filter(...).exclude(...).filter(...)
 
 
-### Obtener un objeto (where)
+### Obtener un objeto (select-where)
 
 Si quieres obtener un sólo registro, por ejemplo preguntando por la clave primaria:
 
@@ -63,3 +63,29 @@ Si no obtienes ningún registro, salta la excepción DoesNotExist, si devuelve m
 Un querySet es una lista de objetos, por lo tanto se pueden seleccionar como lo hacemos con las listas:
 
 		a=Alumnos.objects.all()[1:5]
+
+### Realizando consultas
+
+Para los metodos get(), filter() y exclude()
+
+		metodo(campo__operador)
+
+Operadores:
+
+* exact: Coincidencia exacta, es lo mismo:
+
+		Alumnos.objects.filter(Nombre__exact='Jose')
+		Alumnos.objects.filter(Nombre='Jose')
+
+* iexact: Coincidencia exacta, sin tener en cuenta mayúsculas y minúsculas.
+* constains: Contiene el valor, como LIKE '%...%'
+* startswith, endswith
+* iconstains,istartswith, iendswith: Igual que las anteriores, sin tener en cuenta mayúsculas y minúsculas.
+* lte,lt,gte,gt
+
+### JOIN
+
+		lista=Alumnos.objects.filter(Unidad__Abr='1')
+
+Hay que estudiarlo con más detenimiento, cuando me haga falta.
+
