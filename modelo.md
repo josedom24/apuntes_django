@@ -1,5 +1,9 @@
 # Modelo de datos
 
+Cada vez que cambiamos el modelo, podemos crear una migración, sincronizar con la base de datos y crear la API del modelo:
+
+		python manage.py makemigrations
+		python manage.py migrate
 
 La estructura del fichero donde definimos el modelo es el siguiente:
 
