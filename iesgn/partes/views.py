@@ -8,7 +8,7 @@ from django.shortcuts import redirect
 from partes.forms import UnidadForm
 
 # Create your views here.
-@login_required(login_url='/partes/login/?next=/partes')
+@login_required(login_url='/partes/login')
 def index(request):
 	formulario = ""
 	if request.method=='POST':

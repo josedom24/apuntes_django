@@ -4,11 +4,11 @@ from django.db import models
 # Create your models here.
 
 class Cursos(models.Model):
-	Abr = models.CharField(max_length=15)
+	
 	Curso = models.CharField(max_length=30)
 
 	def __unicode__(self):
-		return self.Abr+" - "+self.Curso
+		return self.Curso
 
 	class Meta:
 		verbose_name="Curso"
@@ -36,4 +36,73 @@ class Alumnos(models.Model):
 	class Meta:
 		verbose_name="Alumno"
 		verbose_name_plural="Alumnos"
+
+class Departamentos(models.Model):
+	Abr = models.CharField(max_length=4)
+	Nombre = models.CharField(max_length=30)
+
+	def __unicode__(self):
+		return self.Nombre
+
+	class Meta:
+		verbose_name="Departamento"
+		verbose_name_plural="Departamentos"
+
+
+class Profesores(models.Model):
+	Nombre = models.CharField(max_length=20)
+	Apellidos = models.CharField(max_length=30)
+	Telefono = models.CharField(max_length=9,blank=True)
+	Movil = models.CharField(max_length=9,blank=True)
+	Email = models.EmailField()
+	Departamento = models.ForeignKey(Departamentos)
+	Baja = models.BooleanField(default=False)
+	Ce = models.BooleanField(default=False,verbose_name="Consejo Escolar")
+	Etcp = models.BooleanField(default=False)
+	Tic = models.BooleanField(default=False)
+	Bil = models.BooleanField(default=False,verbose_name="Bilingüe")
+	Tutor = models.ForeignKey(Cursos)
+
+	def __unicode__(self):
+		return self.Nombre+" "+self.Apellidos
+
+	class Meta:
+		verbose_name="Profesor"
+		verbose_name_plural="Profesores"
+
+
+class Partes(models.Model):
+	tipo = (
+    ('a', 'Amonestación'),
+    ('c', 'Citación'),
+    ('s', 'Sanción'),
+    )
+
+	hora = (
+		('1','Primera'),
+		('2','Segunda'),
+		('3','Tercera'),
+		('4','Recreo'),
+		('5','Cuarta'),
+		('6','Quinta'),
+		('7','Sexta'),
+
+	)
+	dict_tipo={'a':'Amonestacion','c':'Citacion','s':'Sancion'}
+
+	Ida = models.ForeignKey(Alumnos)
+	Tipo = models.CharField(max_length=1,choices=tipo,default='a')
+	Fecha = models.DateField()
+	Fecha_fin = models.DateField()
+	Hora = models.CharField(max_length=1,choices=hora,default='1')
+	Sancion = models.CharField(max_length=100,blank=True)
+	Comentario=models.TextField(blank=True)
+	Profesor = models.ForeignKey(Profesores)
+
+	def __unicode__(self):
+		return self.Ida.Nombre + "(" + self.dict_tipo[self.Tipo] + ")"
+
+	class Meta:
+		verbose_name="Parte"
+		verbose_name_plural="Partes"
 
