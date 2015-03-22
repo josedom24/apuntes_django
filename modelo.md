@@ -89,7 +89,21 @@ Los mismos parámetros que le campo ForeignKey,
 
 * null
 * blank: Campo no requerido (True)
-* choice
+* choice: Podemos definir una tubla con los datos posibles del campo, por ejemplo:
+
+		hora = (
+				('1','Primera'),
+				('2','Segunda'),
+				('3','Tercera'),
+				('4','Recreo'),
+				('5','Cuarta'),
+				('6','Quinta'),
+				('7','Sexta'),
+			)
+Y la ddefinición del campo quedaría:
+
+		Tipo = models.CharField(max_length=1,choices=tipo,default='a')
+
 * db_column
 * db_index
 * db_tablespace
