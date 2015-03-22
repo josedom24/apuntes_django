@@ -1,0 +1,17 @@
+<form action="/partes/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+    {{ unidad }}
+{% if lista_alumnos %}
+    <ul>
+
+    {% for alum in lista_alumnos %}
+        <li>{{ alum.Nombre }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay alumnos.</p>
+
+{% endif %}
+<a href="/partes/logout">Cerrar</a>
