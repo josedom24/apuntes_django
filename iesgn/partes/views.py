@@ -14,12 +14,13 @@ def index(request):
 	if request.method=='POST':
 		formulario = request.POST["Unidad"]
 		lista_alumnos = Alumnos.objects.filter(Unidad__id=request.POST["Unidad"])
+		form = UnidadForm(request.POST)
 	else:
-		lista_alumnos = Alumnos.objects.all()
-	form = UnidadForm()
+		lista_alumnos = Alumnos.objects.filter(Unidad__id=1)
+		form = UnidadForm()
 	template = loader.get_template('index.html')
 	context = RequestContext(request, {
- 	    'lista_alumnos': lista_alumnos,'form':form,"unidad":formulario
+ 	    'lista_alumnos': lista_alumnos,'form':form
     })
 	return HttpResponse(template.render(context))
 

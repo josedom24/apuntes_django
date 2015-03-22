@@ -1,9 +1,6 @@
-from django.forms import ModelForm
-from partes.models import Alumnos
+from django import forms
+from partes.models import Cursos
 
-class UnidadForm(ModelForm):
-    class Meta:
-        model = Alumnos
-        fields = ['Unidad']
-    
+class UnidadForm(forms.Form):
+    Unidad = forms.ModelChoiceField(queryset=Cursos.objects, empty_label=None)
 
