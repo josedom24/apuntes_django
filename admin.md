@@ -47,3 +47,84 @@ preserve_filters: Para recordar los filtros.
 * save_on_top:_ Para poner la opción save arriba.
 search_fields: Lista de campos, por los que se puedn buscar. Se puede configurar bastante (^,=,@)
 * view_on_site: Controla el "View on site"
+
+## Modificar plantillas
+
+Más información:[Overriding admin templates](https://docs.djangoproject.com/en/1.7/ref/contrib/admin/#admin-overriding-templates)
+
+* add_form_template
+* change_form_template
+* change_list_template
+* delete_confirmation_template
+* delete_selected_confirmation_template
+* object_history_template
+
+## Métodos
+
+* save_model(request,obj,form.change): Puede hacer pre o post operaciones al salvar. No lo entiendo muy bien!!!
+* delete_model(request, obj): Pre o post operaciones al borrar.
+* save_formset(request, form, formset, change)
+* get_ordering(request): Gestiona la ordenación.
+* get_search_results(request, queryset, search_term): Modifica la lista de campos para la búsqueda.
+* save_related(request, form, formsets, change)
+* get_readonly_fields(request, obj=None)
+* get_prepopulated_fields(request, obj=None)
+* get_list_display(request)
+* get_list_display_links(request, list_display)
+* get_fields(request, obj=None)
+* get_fieldsets(request, obj=None)
+* get_list_filter(request)
+* get_search_fields(request)
+* get_inline_instances(request, obj=None)
+* get_urls()
+* get_form(request, obj=None, **kwargs)
+* get_formsets(request, obj=None)
+* get_formsets_with_inlines(request, obj=None)
+* formfield_for_manytomany(db_field, request, **kwargs)
+* formfield_for_choice_field(db_field, request, **kwargs)
+* get_changelist(request, **kwargs)
+* get_changelist_form(request, **kwargs)
+* get_changelist_formset(request, **kwargs)
+* has_add_permission(request)
+* has_change_permission(request, obj=None)
+* has_delete_permission(request, obj=None)
+* get_queryset(request)
+* get_paginator(queryset, per_page, orphans=0, allow_empty,first_page=True)
+* response_add(request, obj, post_url_continue=None)
+* response_change(request, obj)
+* response_delete(request, obj_display)
+* get_changeform_initial_data(request)
+* add_view(request, form_url='', extra_context=None)
+* change_view(request, object_id, form_url='', extra,context=None)
+* changelist_view(request, extra_context=None)
+* delete_view(request, object_id, extra_context=None)
+* history_view(request, object_id, extra_context=None)
+
+## Añadir CCS o javascript
+
+		class Media:
+        		css = {
+            		"all": ("my_styles.css",)
+        		}
+        		js = ("my_code.js",)
+
+## Añadiendo validación a medida
+
+## InlineModelAdmin objects
+
+Posibilidad de editar un modelo desde el formulario de otro. No lo veo interesante.
+
+## Cambiar las plantillas 
+
+## AdminSite
+
+* site_header
+* site_title
+* index_title
+* index_template
+* app_index_template
+* login_template
+* login_form
+* logout_template
+* password_change_template
+* password_change_done_template
