@@ -25,4 +25,8 @@
 		            'fields': ('enable_comments', 'registration_required', 'template_name')
 		        }),
 	En las opciondes de los campos puede sponer los siguientes claveS: fileds, classes, description.
-* filter_horizonal: 
+* filter_horizonal,filetr_vertical: Cómo se comportan los campos ManyToManyField.
+* form: Puedo usar o modificar los formularios add / change.
+* formfield_overrides: Puedo cambiar las opciones de los campos de los formularios.
+* inlines: Ver [InlineModelAdmin](https://docs.djangoproject.com/en/1.7/ref/contrib/admin/#django.contrib.admin.InlineModelAdmin)
+* 
