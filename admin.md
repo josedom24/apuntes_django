@@ -41,4 +41,9 @@
 * prepopulated_fields: 
 preserve_filters: Para recordar los filtros.
 * radio_fields: Para indicar que un campo ForeignKey sea un radio.
-* raw_id_fields
+* raw_id_fields: Para indicar que un campo ForeignKey sea un text.
+* readonly_fiels: Lista de campos de sólo lectura. Se puede indicar una función.
+* save_as: Activar el save as... en el formulario de modificación. Para guardar como un nuevo objeto.
+* save_on_top:_ Para poner la opción save arriba.
+search_fields: Lista de campos, por los que se puedn buscar. Se puede configurar bastante (^,=,@)
+* view_on_site: Controla el "View on site"
