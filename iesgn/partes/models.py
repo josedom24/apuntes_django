@@ -108,4 +108,4 @@ class Partes(models.Model):
 		verbose_name_plural="Partes"
 
 class AltaMasiva(models.Model):
-		Fichero=models.FileField(upload_to='/iesgn')
+		Fichero=models.FileField(upload_to='documents/%Y/%m/%d')
