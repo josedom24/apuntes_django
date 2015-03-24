@@ -45,3 +45,5 @@
 * localizr
 
 Más información: [https://docs.djangoproject.com/en/1.7/ref/forms/fields](https://docs.djangoproject.com/en/1.7/ref/forms/fields)
+
+Sobre widgets: [https://docs.djangoproject.com/en/1.7/ref/forms/widgets/](https://docs.djangoproject.com/en/1.7/ref/forms/widgets/)
