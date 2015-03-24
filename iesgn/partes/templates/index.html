@@ -7,7 +7,7 @@
     <ul>
 
     {% for alum in lista_alumnos %}
-        <li>{{ alum.Nombre }}</li>
+        <li>{{ alum.Nombre }}<a href=/partes/amonetacion?id={{alum.id}}>Amonestación</a></li>
     {% endfor %}
     </ul>
 {% else %}
