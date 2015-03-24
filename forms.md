@@ -84,3 +84,16 @@ Llenar datos den un formulario desde un diccionario:
 
 ## Salida HTML del formulario
 
+		f = ContactForm()
+		print(f)
+
+* as_p(): genera el HTML con <p>.
+* as_ul()
+* as_table()
+
+* error_css_class, required_css_class: Sirve para indicar el valor del atributo "class", en los campos con error y requeridos.
+* auto_id: true, el HTML generado contine etiquetas label, además el elemento del formulario tiene el atributo "id" igual al nombre. Se puede especificar de forma más especifica el valor de id.
+* label_suffix: Cadena que se añade al contenido de las etiquetas <label>.
+
+Queda algunas cosas: [https://docs.djangoproject.com/en/1.7/ref/forms/api/](https://docs.djangoproject.com/en/1.7/ref/forms/api/)
+ 
