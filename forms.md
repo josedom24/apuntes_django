@@ -47,4 +47,40 @@ Llenar datos den un formulario desde un diccionario:
 
  		f = ContactForm(data)
 
+
+## Gestión de errores
+
 * is_bound: True si el formulario tiene datos.
+* clean(): 
+* is_valid(): True si el formulario es válido.
+* errors: Diccionario de los mensajes de error. La clave es el nombre del campo. Los mensajes son una lista, porque un campo puede tener varios mensajes de errores.
+* errors.as_data(): diccionario de los campos con el objeto ValidationError.
+* errors.as_json()
+* add_error(): Añade nuevos errores.
+* non_field_errors():
+
+## Valores iniciales
+
+* initial: valores iniciales del formulario.
+
+ 		f = ContactForm(initial={'subject': 'Hi there!'}) 
+
+## Comprobando si los valores han cambiado
+
+ * has_changed(): True, si los datos de request.POST son diferentes a initial.
+
+## Accediendo a los campos del formulario
+
+ * fields: Valores del formulario.
+ Ejemplos:
+
+ 		for row in f.fields.values(): print(row)
+ 		f.fields['name']
+ 		f.fields['name'].label = "Username"
+
+## Accediendo al los datos "válidos" (clean)
+
+* cleaned_data: Una vez que es válido el formulario, los datos para su procesamiento se pueden obtener de este diccionario.
+
+## Salida HTML del formulario
+
