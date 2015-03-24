@@ -5,6 +5,7 @@ class AlumnosAdmin(admin.ModelAdmin):
     date_hierarchy = 'Fecha_nacimiento'
     actions_selection_counter=False
     list_filter = ['Unidad','Localidad']
+    
 admin.site.register(Cursos)
 admin.site.register(Alumnos,AlumnosAdmin)
 admin.site.register(Profesores)
