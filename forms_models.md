@@ -14,7 +14,7 @@
 
 ## Relación entre el campo del módelo y el campo del formulario:
 
-Model field 			Form field
+Model field |	Form field
 AutoField 				Not represented in the form
 BigIntegerField 		IntegerField with min_value set to -9223372036854775808 and max_value set to 9223372036854775807.
 BooleanField 			BooleanField
