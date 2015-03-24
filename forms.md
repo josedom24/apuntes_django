@@ -36,3 +36,15 @@ La plantilla:
 		    <input type="submit" value="Submit" />
 		</form>
 
+* form bound: Tiene datos, se puede validar.
+* form unbound: No tiene información
+
+Crear un formaulario:
+
+		f = ContactForm()
+
+Llenar datos den un formulario desde un diccionario:
+
+ 		f = ContactForm(data)
+
+* is_bound: True si el formulario tiene datos.
