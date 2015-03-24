@@ -2,10 +2,31 @@
 
 ## Tipos de campos
 
-* BooleanField
+* BooleanField¶
+* CharField¶
+* ChoiceField¶
+* TypedChoiceField¶
+* dateField¶
+* DateTimeField¶
+* DecimalField¶
+* EmailField¶
+* FileField¶
+* FilePathField¶
+* FloatField¶
+* ImageField¶
+* IntegerField¶
+* IPAddressField¶
+* GenericIPAddressField¶
+* MultipleChoiceField¶
+* TypedMultipleChoiceField¶
+* NullBooleanField¶
+* RegexField¶
+* SlugField¶
+* TimeField¶
+* URLField¶
+* ComboField¶
+* SplitDateTimeField¶
+* ModelChoiceField¶
+* ModelMultipleChoiceFiel
 
-    * Default widget: CheckboxInput
-    * Empty value: False
-    * Normalizes to: A Python True or False value.
-    * Validates that the value is True (e.g. the check box is checked) if the field has required=True.
-    * Error message keys: required
+## Método
