@@ -31,7 +31,7 @@ class Alumnos(models.Model):
 	Obs=models.TextField(blank=True,verbose_name="Observaciones")
 
 	def __unicode__(self):
-		return self.DNI+" - "+self.Nombre
+		return self.DNI+" - "+self.Nombre 
 
 	class Meta:
 		verbose_name="Alumno"
