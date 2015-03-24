@@ -7,3 +7,4 @@ Apuntes personales, resumen de la [documentación oficial](https://docs.djangopr
 * [Modelo de datos](modelo.md)
 * [API del modelo](api.md)
 * [Formularios](forms.md)
+* [El sitio de administración](admin.md)
