@@ -33,6 +33,7 @@ class Alumnos(models.Model):
 	def __unicode__(self):
 		return self.DNI+" - "+self.Nombre 
 
+
 	class Meta:
 		verbose_name="Alumno"
 		verbose_name_plural="Alumnos"
@@ -106,3 +107,5 @@ class Partes(models.Model):
 		verbose_name="Parte"
 		verbose_name_plural="Partes"
 
+class AltaMasiva(models.Model):
+		Fichero=models.FileField(upload_to='/iesgn')
