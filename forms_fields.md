@@ -29,4 +29,19 @@
 * ModelChoiceField¶
 * ModelMultipleChoiceFiel
 
-## Método
+## Método de los campos
+
+* clean(value): Permite comprobar si el valor provoca un error.
+
+## Atributos
+
+* required
+* label
+* initial
+* widget
+* help_text
+* error_messages
+* validators
+* localizr
+
+Más información: [https://docs.djangoproject.com/en/1.7/ref/forms/fields](https://docs.djangoproject.com/en/1.7/ref/forms/fields)
