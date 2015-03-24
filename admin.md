@@ -29,4 +29,16 @@
 * form: Puedo usar o modificar los formularios add / change.
 * formfield_overrides: Puedo cambiar las opciones de los campos de los formularios.
 * inlines: Ver [InlineModelAdmin](https://docs.djangoproject.com/en/1.7/ref/contrib/admin/#django.contrib.admin.InlineModelAdmin)
-* 
+* list_display: La lista de atributos que aprece en la lista de registro. Se puede indicar la salida de una función.
+* list_display_links: Cúal de los atributos de list_display, tiene un link, para ser editado.
+* list_editable: Lista de los campos editables en la página donde se muestra los datos.
+* list_filter: Activa filtros en el lateral. Lista de campos para los filtros. Puedo crear mis propios filtros.
+* list_max_show_all: Número de registro para mostrar un botón "Show all".
+* list_per_page: Número de registro por página.
+* list_select_related: 
+* ordering: Gestiona la ordenación.
+* paginator: Paginador.
+* prepopulated_fields: 
+preserve_filters: Para recordar los filtros.
+* radio_fields: Para indicar que un campo ForeignKey sea un radio.
+* raw_id_fields
